@@ -33,8 +33,6 @@ require 'spec_helper'
 		let(:page_title)	{ '' }
 
 		it_should_behave_like "all static pages"		
-
-		it { should_not have_selector 'title', text: '| Home'}
 	end
 
 	describe "Help page" do
@@ -44,7 +42,6 @@ require 'spec_helper'
 
 		it_should_behave_like "all static pages"
 
-		it { should_not have_selector 'title', text: '| Help' }
 	end
 
 	describe "About page" do
@@ -53,8 +50,6 @@ require 'spec_helper'
 		let(:page_title)	{ '' }
 
 		it_should_behave_like "all static pages"
-
-		it { should_not have_selector 'title', text: '| About' }
 	end
 
 	describe "Contact page" do
@@ -63,8 +58,6 @@ require 'spec_helper'
 		let(:heading)		{ 'Contact' }
 		let(:page_title)	{ '' }
 
-		it { should_not have_selector 'title', text: '| Contact' }
 	end
-
 end
 
