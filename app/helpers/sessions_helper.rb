@@ -16,7 +16,7 @@ module SessionsHelper
 	def current_user
 		@current_user ||=User.find_by_remember_token(cookies[:remember_token])
 	end
-
+					# @current_user equals @current_user (if it's nil) or etc.. if it's not
 	def sign_out
 		self.current_user = nil
 		cookies.delete(:remember_token)
